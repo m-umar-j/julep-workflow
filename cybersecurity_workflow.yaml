@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/julep-ai/julep/refs/heads/dev/schemas/create_task_request.json
-name: Julep Trip Planning Task
-description: A Julep agent that can generate a detailed itinerary for visiting tourist attractions in some locations, considering the current weather conditions.
+name: Cyber security workflow using Julep
+description: A cybersecurity workflow using Julep where vulnerability is for a site/domain given in prompt 
 
 ########################################################
 ################### INPUT SCHEMA #######################
@@ -13,29 +13,29 @@ input_schema:
       type: array
       items:
         type: string
-      description: The locations to search for.
+      description:  The IP address or domain to scan.
 
 ########################################################
 ################### TOOLS ##############################
 ########################################################
 
 tools:
-- name: wikipedia
+- name: nmap
   type: integration
   integration:
-    provider: wikipedia
+    provider:  # 
 
-- name: weather
+- name: ffuf
   type: integration
   integration:
-    provider: weather
+    provider: #
     setup:
       openweathermap_api_key: "YOUR_OPENWEATHERMAP_API_KEY"
 
-- name: internet_search
+- name: sqlmap
   type: integration
   integration:
-    provider: brave
+    provider: #
     setup:
       brave_api_key: "YOUR_BRAVE_API_KEY"
 
